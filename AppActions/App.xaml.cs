@@ -22,11 +22,9 @@ public partial class App : Application
         }
         MainThread.BeginInvokeOnMainThread(async () =>
         {
-            //await Shell.Current.GoToAsync($"//{e.AppAction.Id}");
-
-            var stuff = e.AppAction.Id;
-            var navigation = App.Current.MainPage.Navigation;
-            await navigation.PushModalAsync(new ModalPage());
+            var appActionId = e.AppAction.Id;
+            var navigation = Current.MainPage.Navigation;
+            await navigation.PushModalAsync(new ModalPage(e.AppAction.Title));
         });
     }
 }

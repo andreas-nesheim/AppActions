@@ -2,9 +2,11 @@
 
 public partial class ModalPage : ContentPage
 {
-	public ModalPage()
+	public ModalPage(string appActionTitle)
 	{
 		InitializeComponent();
+
+		WelcomeLabel.Text = $"Opened the {appActionTitle} app action!";
 	}
 }
 

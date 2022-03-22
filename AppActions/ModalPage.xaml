@@ -3,18 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppActions.ModalPage"
              BackgroundColor="{DynamicResource SecondaryColor}">
-
-    <ScrollView>
-        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
-              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-
-            <Label 
-                Text="Hello, App Action!"
-                Grid.Row="0"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-        </Grid>
-    </ScrollView>
+    <Label
+        x:Name="WelcomeLabel"
+        Text="Hello, App Action!"
+        VerticalOptions="Center"
+        FontSize="20"
+        HorizontalTextAlignment="Center"
+        HorizontalOptions="Center" />
 </ContentPage>

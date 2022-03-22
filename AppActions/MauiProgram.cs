@@ -7,6 +7,10 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.ConfigureEssentials(e =>
+			{
+				e.AddAppAction(new AppAction("myid", "Test", icon: "dotnet_bot"));
+			})
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

@@ -5,8 +5,8 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
-		
-		Microsoft.Maui.Essentials.AppActions.OnAppAction += AppActions_OnAppAction;
+
+        Microsoft.Maui.ApplicationModel.AppActions.OnAppAction += AppActions_OnAppAction;
 
 		MainPage = new MainPage();
 	}
@@ -17,7 +17,7 @@ public partial class App : Application
         // and cleanup the old instance's event handler
         if (Application.Current != this && Application.Current is App app)
         {
-            Microsoft.Maui.Essentials.AppActions.OnAppAction -= app.AppActions_OnAppAction;
+            Microsoft.Maui.ApplicationModel.AppActions.OnAppAction -= app.AppActions_OnAppAction;
             return;
         }
         MainThread.BeginInvokeOnMainThread(async () =>
